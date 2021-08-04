@@ -1,0 +1,205 @@
+
+<!DOCTYPE html>
+<head>
+    <link rel="stylesheet" href="styles.css">
+
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    
+    <title>VFly</title>
+</head>
+<body>
+    <div id="nav-placeholder">
+
+    </div>
+    <section style="padding: 30px;">
+        <h3>
+            Flight Booking at low cost
+        </h3>
+        <br>
+    <img src="images/bg-b.jpg"  height="300px" style="margin-left:100px;">
+    </section>
+  
+    <h4 style="text-align: center;">
+        Search are see the status of flights before booking <a href="./Flightstatus.html">here</a> 
+    </h4>
+
+<section style="padding: 70px; background-image: url('images/bg-bk.jpg');  background-position: center; /* Center the image */
+background-repeat: no-repeat; 
+background-size: cover; " >
+    <h4 style="font-family:  'Comfortaa', cursive;font-size: 40px;">One way:</h4>
+
+    <form id="main-form">
+          <div class="row">
+            <div class="col-md-4">
+              <div class="form-group">
+                <div>
+                    <label for="exampleInputPassword1">From</label>
+                   <select class="form-control" id='from' required>
+                    <option value="New Delhi">New Delhi,India</option>
+                    <option value="Abu Dhabi">Abu Dhabi, UAE</option>
+                    <option value="Muscut">Muscat,Oman</option>
+                   </select>
+                  </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+              
+              <div class="form-group">
+               <div>
+                <label for="exampleInputPassword1">To</label>
+               <select class="form-control" id='to' required>
+                 <option value="New Delhi">New Delhi,India</option>
+                 <option value="Abu Dhabi">Abu Dhabi, UAE</option>
+                 <option value="Muscut">Muscat,Oman</option>
+               </select>
+              </div>
+            </div>
+            </div>
+            <div class="col-md-4">
+              <div class="form-group">
+                <div>
+                    <label for="exampleInputPassword1">Date</label>
+                    <input type="date" id="date" class="form-control" id="exampleInputPassword1" placeholder="ebter date of travel." aria-required="true">
+                  </div>
+                </div>
+            </div>
+          </div>
+         
+           <br>
+
+          
+           
+           <div class="row">
+             <div class="col-md-4">
+                <div class="form-group">
+                    <div>
+                        <label for="exampleInputPassword1">No. of passengers</label>
+                        <input type="number" class="form-control" id="exampleInputPassword1" placeholder="no. of passengers" required>
+                      </div>
+                    </div>
+             </div>
+             <div class="col-md-4">
+                <div class="form-group">
+                    <div>
+                        <label for="exampleInputPassword1">Flight number:<a href="./Flightstatus.html"> ( Search here )</a></label>
+                        <input type="text" class="form-control fno" id="exampleInputPassword1" placeholder="flight number" required>
+                      </div>
+                    </div>
+             </div>
+             
+             <div class="col-md-4">
+               <div class="form-group">
+                 <div>
+                     <label for="payment">Payment:</label>
+                   <button class="btn btn-primary btn-lg" id="btn" aria-required="true" onclick="validate()">Continue...</button>
+                 </div>
+               </div>
+             </div>
+           </div>
+           
+        </form>
+
+        <hr>
+        <hr>
+        <h4 style="font-family:  'Comfortaa', cursive;font-size: 40px;">Round Trip:</h4>
+
+    <form id="main-form">
+          <div class="row">
+            <div class="col-md-4">
+              <div class="form-group">
+                <div>
+                    <label for="exampleInputPassword1">From</label>
+                   <select class="form-control" id='from' required>
+                    <option value="New Delhi">New Delhi,India</option>
+                    <option value="Abu Dhabi">Abu Dhabi, UAE</option>
+                    <option value="Muscut">Muscat,Oman</option>
+                   </select>
+                  </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+              
+              <div class="form-group">
+               <div>
+                <label for="exampleInputPassword1">To</label>
+               <select class="form-control" id='to' required>
+                 <option value="New Delhi">New Delhi,India</option>
+                 <option value="Abu Dhabi">Abu Dhabi, UAE</option>
+                 <option value="Muscut">Muscat,Oman</option>
+               </select>
+              </div>
+            </div>
+            </div>
+            <div class="col-md-4">
+              <div class="form-group">
+                <div>
+                    <label for="exampleInputPassword1" required>Date</label>
+                    <input type="date" class="form-control" id="exampleInputPassword1" placeholder="enter date of travel.">
+                  </div>
+                </div>
+            </div>
+          </div>
+         
+           <br>
+
+          
+           
+           <div class="row">
+            <div class="col-md-4">
+                <div class="form-group">
+                    <div>
+                        <label for="exampleInputPassword1">Return Date</label>
+                        <input type="date"  class="form-control" id="exampleInputPassword1" placeholder="Arrival date" required/>
+                      </div>
+                </div>
+              </div>
+             <div class="col-md-4">
+                <div class="form-group">
+                    <div>
+                        <label for="exampleInputPassword1">No. of passengers</label>
+                        <input type="number" class="form-control" id="exampleInputPassword1" placeholder="no. of passengers" required/>
+                      </div>
+                    </div>
+             </div>
+             <div class="col-md-4">
+                <div class="form-group">
+                    <div>
+                        <label for="exampleInputPassword1">Flight number:<a href="./Flightstatus.html"> ( Search here )</a></label>
+                        <input type="text" class="form-control fno" id="exampleInputPassword1" placeholder="flight number" required/>
+                      </div>
+                    </div>
+             </div>
+             
+            
+           </div>
+           <div style="text-align: right;">
+            <label for="payment">Payment:</label>
+          <button class="btn btn-primary btn-lg" id="btn" aria-required="true" onclick='validate()'>Continue...</button>
+        </div>
+        </form>
+
+        <hr>
+        <hr>
+
+        <footer style="margin: 5px; text-align: center;">
+            <i class="far fa-copyright"></i>Copyright 2021 VFly. All rights reserved.
+      </footer>
+</section>
+
+   
+    
+<script>
+    $(function(){
+      $("#nav-placeholder").load("navbar.html");
+    });
+
+    function validate(){
+    
+        setTimeout(function() {window.location = "payment.html" });
+  
+    }
+   
+    </script>
+
+</body>
+</html>

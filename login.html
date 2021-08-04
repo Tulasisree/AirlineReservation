@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<head>
+    <link rel="stylesheet" href="styles.css">
+
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <title>VFly</title>
+</head>
+<body>
+    <div id="nav-placeholder">
+
+    </div>
+<div class="container"  style="padding-left: 100px;padding-right: 100px;padding-top: 100px;">
+    <form>
+        <div class="form-group">
+            <div>
+                <label for="exampleInputPassword1">Enter Mobile Number:</label>
+                <input type="text" id='pno' class="form-control" id="exampleInputPassword1" placeholder="Mobile Number">
+              </div>
+         <div>
+             <br>
+            <label for="exampleInputPassword1">Password :</label>
+            <input type="password" id='p1' class="form-control" id="exampleInputPassword1" placeholder="Password">
+          </div>
+          <br>
+          
+          <label for="exampleInputPassword1">Re-Enter Password :</label>
+          <input type="password" id='p2' class="form-control" id="exampleInputPassword1" placeholder="Password">
+        </div>
+        <br>
+          <button type="button" class="btn btn-outline-primary btn-lg" style="margin:10px;">Cancel</button>
+          <button type="button" class="btn btn-primary btn-lg" style="margin: 10px;" onclick="validate()">LogIn</button>
+          </form>
+</div>
+    
+
+          <div>
+            <hr>
+            <footer style="margin: 5px; text-align: center;">
+                <i class="far fa-copyright"></i>Copyright 2021 VFly. All rights reserved.
+          </footer>
+          </div>
+          
+
+    <script>
+        $(function(){
+          $("#nav-placeholder").load("navbar.html");
+        });
+
+        function validate(){
+          var numbers = /[0-9]/;
+          var pno = document.getElementById('pno').value;
+          var p1 = document.getElementById('p1').value;
+          var p2 = document.getElementById('p2').value;
+          if(pno.match(numbers) && pno.length==10 && p1==p2){
+            alert("Successfully logged In");
+            setTimeout(function() {window.location = "book.html" });
+          }else{
+            alert("Details are incorrect");
+          }
+        }
+        </script>
+</body>
+</html>

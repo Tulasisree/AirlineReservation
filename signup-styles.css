@@ -1,0 +1,100 @@
+/*body{
+    background: url("./mars6.jpg")no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover ;
+  
+  }
+  */
+  .headings{
+    padding:10px;
+    text-align: center;
+  }
+  
+  h3{
+    font-family: 'Creepster', cursive;
+    font-size: 30px;
+    color: rgb(238, 236, 145);
+  }
+  
+  .container{
+    /*background-image: url("./mars3.jpg");*/
+    box-shadow: 10px 10px 50px #1d1c1c, 
+            -10px -10px 60px #464444;
+   /* height: 600px;*/
+   
+
+  }
+  
+  
+ 
+  
+  .input-section {
+    display: flex;
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  
+  .icon {
+    padding: 10px;
+    background: rgba(29, 39, 185, 0.698);
+    color: white;
+    min-width: 50px;
+    text-align: center;
+  }
+  
+  
+  .input-ele {
+  width: 100%;
+  padding: 10px;
+  outline: none;
+  }
+  
+  input:hover{
+  background-color: rgb(146, 192, 230);
+  }
+  
+  input:focus{
+  border: solid 2px rgba(29, 128, 185, 0.698);
+  }
+  
+  .btn{
+  width:100px;
+  background-color: rgba(29, 174, 185, 0.698);
+  outline: rgb(42, 85, 165);
+  color: rgba(63, 44, 42, 0.698);
+  font-family: 'Freckle Face', cursive;
+  font-size: 25px;
+  }
+  
+  .social-sections{
+  margin-left: 50px;
+  margin-top: 80px;
+  }
+  
+  .btn-g{
+  width:200px;
+  }
+  
+  .btn-g:hover{
+  background-color: rgb(230, 177, 146);
+  }
+  
+  .btn-font{
+  font-family: 'Freckle Face', cursive;
+  font-size:25px;
+  color:rgba(63, 44, 42, 0.698);
+  background-color: antiquewhite;
+  }
+  
+  
+  .vl {
+  border-left: 5px solid rgb(81, 131, 165);
+  height: 400px;
+  position: absolute;
+  /*margin-left: 350px;*/
+  }
+  
+  
+  

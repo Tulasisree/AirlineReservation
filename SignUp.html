@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="signup-styles.css">
+
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <title>VFly</title>
+</head>
+<body  style="background-image: url('images/bg-sp.jpg');">
+    <div id="nav-placeholder">
+
+    </div>
+
+   <!-- <div class="container SignUp-cont ">
+       <form style="padding: 50px;">
+        <div class="form-group">
+            <div>
+                <label for="exampleInputPassword1">Enter Mobile Number:</label>
+                <input type="tel" class="form-control" id="exampleInputPassword1" placeholder="Mobile Number">
+              </div>
+         <div>
+             <br>
+            <label for="exampleInputPassword1">Password :</label>
+            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+          </div>
+          <div>
+              <br>
+          <label for="exampleInputPassword1">Confirm Password :</label>
+          <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Confirm Password">
+        </div>
+        <div>
+            <br>
+            <label for="exampleInputPassword1">First Name :</label>
+            <input type="text" class="form-control" id="exampleInputPassword1" placeholder="First Name">
+          </div>
+          <div>
+              <br>
+            <label for="exampleInputPassword1">Last Name :</label>
+            <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Last Name">
+          </div>
+          <div>
+              <br>
+            <label for="exampleInputPassword1">Date Of Birth :</label>
+            <input type="date" class="form-control" id="exampleInputPassword1" placeholder="Date Of Birth">
+          </div>
+          <div>
+              <br>
+            <label for="exampleInputPassword1">Email ID :</label>
+            <input type="email" class="form-control" id="exampleInputPassword1" placeholder="Email ID">
+          </div>
+          <br>
+          <div style="text-align: left;">
+            <button type="button" class="btn btn-outline-primary btn-lg" style="margin: 10px;">Cancel</button>
+            <button type="button" class="btn btn-primary btn-lg" style="margin: 10px;"><b style="padding: 15px;font-family: 'Comfortaa', cursive;">Finish</b></button>
+          </div>
+          
+       </form>
+
+    </div>-->
+
+    <div class="container"> 
+      <div class="row">   
+          <div class="col-md-6">
+          <form onSubmit="validate()">
+
+            <label for="fname"> Phone Number :</label>
+            <div class="input-section"> 
+            <i class="fas fa-user icon"></i>
+            <input id="pno" class="input-ele" type="text" name="fname" placeholder="Enter mobile number" required ></input>
+            </div>
+
+              <label for="fname">Enter your First name :</label>
+              <div class="input-section"> 
+              <i class="fas fa-user icon"></i>
+              <input id="fname" class="input-ele" type="text" name="fname" placeholder="Enter First Name" required ></input>
+              </div>
+              
+              <label for="lname">Enter your last name :</label>
+              <div class="input-section">
+              <i class="fas fa-user icon"></i>
+              <input id="lname" class="input-ele" type="text" name="lname" placeholder="Enter Last Name" required></input>
+              </div>
+             
+              <label for="email">Email :</label>
+              <div class="input-section">
+              <i class="fas fa-envelope icon"></i>
+              <input class="input-ele" type="email" name="email" placeholder="Enter email ID" required></input>
+             </div>
+  
+             <label for="dob">Date of Birth :</label> 
+              <div class="input-section">
+              <i class="fas fa-birthday-cake icon"></i>
+              <input class="input-ele" type="date" name="dob" id='dob' placeholder="Date of birth"></input>
+              </div>
+             
+              <label for="password">Password:</label>
+              <div class="input-section">
+              <i class="fas fa-key icon"></i>
+              <input class="input-ele" type="password" name="password" placeholder="enter password" required></input>
+              </div>
+             
+              <div class="input-section">
+              <button type="submit" class="btn btn-primary btn-lg" >Sign In</button>
+              </div>
+          </form>
+      </div>
+  
+          
+      <div class="col-md-6">
+          <div class="social-section">
+              <div class="margin-section">
+                  <div class="vl"></div>
+             </div>
+                
+             <div class="social-sections">
+                  <label style="font-size: 40px;">SignIn using:</label> 
+                  <br>
+          <div class="input-section">
+              <!--<i class="fab fa-google icon"></i>
+              <i class="fab fa-facebook-f icon"></i>-->
+              <img src="images/fb.png" height="60px" width="60px" style="margin-right: 20px;">
+
+              <img src="images/google.png" height="65px" width="65px" >
+          </div>
+          
+          
+          </div>
+          </div>
+      </div>
+      </div>
+      </div>
+  
+
+    <hr>
+    <footer style="margin: 5px; text-align: center;">
+        <i class="far fa-copyright"></i>Copyright 2021 VFly. All rights reserved.
+  </footer>
+  
+    <script>
+        $(function(){
+          $("#nav-placeholder").load("navbar.html");
+        });
+
+        function validate(){
+          var letters = /^[A-Za-z]+$/;
+          var numbers = /[0-9]/;
+          var pno = document.getElementById('pno').value;
+          var fname= document.getElementById("fname").value ;
+          var lname =  document.getElementById("lname").value;
+          var dob = document.getElementById('dob').value;
+          var today = new Date();
+
+            if(fname.match(letters) && lname.match(letters) && pno.length==10 &&pno.match(numbers) && (today.getDate() - dob >=18)){
+                alert("Hello "+fname+" "+lname);
+                setTimeout(function() {window.location = "login.html" });
+               }else{
+                alert("Enter valid Phone number or name and Age must be greater or equal to 18");
+            }
+        }
+        </script>
+</body>
+</html>
